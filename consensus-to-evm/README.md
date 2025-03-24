@@ -50,8 +50,8 @@ node consensus-to-evm.js
 ## 示例输出
 成功连接到网络后会打印源地址：
 ``` css
-st8GMptMgxQNNKviNWMzXKQHvQactTX3iMbSxUpdmetBRqwNY //发送源钱包地址
-0x935cc82b28998273f6eab67ee31337f7f2e087244ce697126bed27e8c2e5c56 //交易哈希
+st8GMptMgxQNNKviNWMzXKQHvQactTX3iMbSxUpdmetxxx //发送源钱包地址
+0x935cc82b28998273f6eab67ee31337f7f2xxx126bed27e8c2e5c56 //交易哈希
 ```
 
 ## 注意事项
