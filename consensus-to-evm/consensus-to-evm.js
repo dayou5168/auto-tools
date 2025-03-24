@@ -6,6 +6,13 @@ dotenv.config();
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const WS_ENDPOINT = process.env.WS_ENDPOINT;
 const EVM_ADDRESS = process.env.EVM_ADDRESS
+const AMOUNT = parseFloat(process.env.AMOUNT);
+
+if (isNaN(AMOUNT) || AMOUNT <= 0) {
+  throw new Error('Invalid amount in .env file. Please provide a valid number.');
+}
+
+const AMOUNT_SHANNON = (AMOUNT * 1e18).toString(); 
 
 const private_node_api = await createConnection(WS_ENDPOINT);
 
@@ -23,15 +30,15 @@ const private_node_api = await createConnection(WS_ENDPOINT);
   }
 
   // print source address to validate that it's your address. for debuging.
-  console.log(address);
+  console.log(`Source Address: ${address}`);
 
   const tx = await transferToDomainAccount20Type(
     api,
     '0', // Receiver domain (0 is Auto EVM on the Taurus testnet)
     EVM_ADDRESS, // Receiver EVM address
-    '1000000' // Amount in smallest unit (Shannon)
+    AMOUNT_SHANNON // Amount in smallest unit (Shannon)
   );
   const hash = await tx.signAndSend(account);
-  console.log(hash.toHuman());
+  console.log(`Transaction Hash: ${hash.toHuman()}`);
   await api.disconnect();
 })();
