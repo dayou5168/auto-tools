@@ -18,11 +18,13 @@ npm包管理工具
 PRIVATE_KEY=您的私钥/助词词
 WS_ENDPOINT=WebSocket 节点地址
 EVM_ADDRESS=目标 EVM 地址
+AMOUNT=转账金额
 ```
 
 - PRIVATE_KEY：源账户的私钥，用于签名交易。
 - WS_ENDPOINT：Auto 网络的 WebSocket 端点，例如：wss://taurus.autonomy.io/ws。
 - EVM_ADDRESS：接收方的 EVM 地址。
+- AMOUNT：转账金额，单位为AI3
 
 ## 安装依赖
 
@@ -56,7 +58,7 @@ st8GMptMgxQNNKviNWMzXKQHvQactTX3iMbSxUpdmetxxx //发送源钱包地址
 
 ## 注意事项
 
-请确保您的账户中有足够的代币以支付交易费用。转账金额单位为AI3,可以在.env文件中编辑。
+请确保您的账户中有足够的代币以支付交易费用。
 
 ## 特别鸣谢
 本脚本得到了AI工具的大力支持，包含Grok,Chatgpt.
