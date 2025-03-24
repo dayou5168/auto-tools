@@ -56,8 +56,7 @@ st8GMptMgxQNNKviNWMzXKQHvQactTX3iMbSxUpdmetxxx //发送源钱包地址
 
 ## 注意事项
 
-请确保您的账户中有足够的代币以支付交易费用。
-转账金额应使用最小单位（例如：Shannon）表示。
+请确保您的账户中有足够的代币以支付交易费用。转账金额单位为AI3,可以在.env文件中编辑。
 
 ## 特别鸣谢
 本脚本得到了AI工具的大力支持，包含Grok,Chatgpt.
