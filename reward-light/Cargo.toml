@@ -1,0 +1,20 @@
+[package]
+name = "reward-light"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+jsonrpsee = {version="0.25.1", features=["full"]}
+serde_json = "1.0.140"
+tokio = "1.45.1"
+subxt = { version = "0.42.0", features = ["unstable-light-client", "unstable-metadata"] }
+parity-scale-codec = "3.7.5"
+hex = "0.4.3"
+subxt-rpcs = "0.42.1"
+anyhow = "1.0.98"
+sp-core = "36.1.0"
+futures = "0.3.31"
+serde = "1.0.219"
+clap = {version="4.5.39", features = ["derive"]}
