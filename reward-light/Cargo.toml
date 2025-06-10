@@ -6,9 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-jsonrpsee = {version="0.25.1", features=["full"]}
 serde_json = "1.0.140"
-tokio = "1.45.1"
+tokio = { version = "1.45.1", features = ["rt-multi-thread", "macros"] }
 subxt = { version = "0.42.0", features = ["unstable-light-client", "unstable-metadata"] }
 parity-scale-codec = "3.7.5"
 hex = "0.4.3"
